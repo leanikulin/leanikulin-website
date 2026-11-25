@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lea · Odvaha začať odznova</title>
+<meta name="description" content="Som Lea. Z uniformy do vlastnej cesty v online podnikaní. Part-time príležitosť, osobný rast a komunita. Napíš mi a urob prvý krok.">
+<meta name="theme-color" content="#F5EDE3">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lea · Odvaha začať odznova">
+<meta property="og:description" content="Môj príbeh a príležitosť, ktorá ťa môže posunúť. Napíš mi.">
+<!-- Po nahratí na GitHub nahraď og:image plnou adresou, napr. https://TVOJE-MENO.github.io/NAZOV-REPO/hero.jpg (kvôli náhľadu odkazu na WhatsAppe) -->
+<meta property="og:image" content="hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%234A3329'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='%23F5EDE3' font-family='Georgia,serif' font-style='italic'%3EL%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.className+=' js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..700;1,400..700&family=Newsreader:ital,wght@0,300..500;1,300..500&family=Karla:wght@300..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F5EDE3; --latte:#E8D8C6; --blush:#EBD3C3; --sand:#D8BFA6;
+  --mocha:#7A5A46; --cocoa:#4A3329; --ink:#2A1C16; --soft:#55402F;
+  --display:'Bodoni Moda','Bodoni 72',Didot,Georgia,serif;
+  --text:'Newsreader',Georgia,'Times New Roman',serif;
+  --ui:'Karla',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --pad:clamp(20px,5vw,72px); --maxw:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--text);font-size:clamp(1.05rem,.9rem + .45vw,1.2rem);line-height:1.7;color:var(--ink);
+  background-color:var(--ivory);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .29 0 0 0 0 .2 0 0 0 0 .16 0 0 0 .12 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  -webkit-font-smoothing:antialiased;
+}
+main{overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+section[id]{scroll-margin-top:64px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--cocoa);color:var(--ivory);padding:10px 16px;z-index:200;font-family:var(--ui)}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--mocha);outline-offset:3px}
+
+/* ---------- společné prvky ---------- */
+.inner{width:min(100%,var(--maxw));margin:0 auto;padding:0 var(--pad)}
+.sec{padding:clamp(72px,9vw,128px) 0;position:relative}
+.folio{display:flex;justify-content:space-between;gap:16px;border-top:1px solid rgba(74,51,41,.38);padding-top:14px;margin-bottom:clamp(32px,5vw,60px);font-family:var(--ui);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mocha)}
+.label{font-family:var(--ui);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mocha);font-weight:500}
+.title{font-family:var(--display);font-weight:500;line-height:1.02;font-size:clamp(2.5rem,6.6vw,5.4rem);letter-spacing:-.015em;color:var(--cocoa)}
+.title em{font-style:italic;font-weight:400;color:var(--mocha)}
+.pill{display:inline-block;font-family:var(--ui);font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:12px 22px;border-radius:999px;border:1px solid var(--cocoa);color:var(--cocoa);background:transparent;cursor:pointer;transition:background .25s,color .25s,transform .25s;line-height:1.2}
+.pill:hover{background:var(--cocoa);color:var(--ivory)}
+.pill.fill{background:var(--cocoa);color:var(--ivory)}
+.pill.fill:hover{background:var(--mocha);border-color:var(--mocha)}
+.btn{display:inline-block;font-family:var(--ui);font-size:.8rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:17px 36px;border-radius:999px;border:0;background:var(--cocoa);color:var(--ivory);cursor:pointer;transition:background .25s,transform .25s}
+.btn:hover{background:var(--mocha);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--cocoa);border:1px solid var(--cocoa)}
+.btn.ghost:hover{background:var(--cocoa);color:var(--ivory)}
+
+/* fotografie */
+.fig{margin:0;position:relative}
+.fig .frame{position:relative}
+.fig .frame::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--mocha);opacity:.5}
+.fig img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;filter:sepia(.18) saturate(.92) contrast(1.02)}
+.fig figcaption{margin-top:28px;font-family:var(--ui);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mocha);line-height:1.7;max-width:26em}
+
+/* ---------- horná lišta ---------- */
+.top{position:fixed;inset:0 0 auto 0;z-index:80;display:flex;align-items:center;justify-content:space-between;padding:14px var(--pad);transition:background .3s,box-shadow .3s}
+.top.solid{background:rgba(245,237,227,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.top .bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--mocha);transform-origin:left;transform:scaleX(var(--p,0))}
+.mono{font-family:var(--display);font-weight:600;font-size:1.55rem;letter-spacing:.16em;text-decoration:none;color:var(--cocoa);transition:opacity .3s}
+.top:not(.solid) .mono{opacity:0;pointer-events:none}
+.top .right{display:flex;gap:10px;align-items:center;margin-left:auto}
+
+/* obsah (menu) */
+.menu{position:fixed;inset:0;z-index:90;background:var(--cocoa);color:var(--ivory);padding:96px var(--pad) 40px;overflow:auto}
+.menu .close{position:absolute;top:18px;right:var(--pad);font-family:var(--ui);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);background:none;border:1px solid rgba(245,237,227,.5);border-radius:999px;padding:12px 22px;cursor:pointer}
+.menu ol{list-style:none;max-width:900px;margin:0 auto}
+.menu li a{display:flex;gap:26px;align-items:baseline;padding:18px 0;border-bottom:1px solid rgba(245,237,227,.18);text-decoration:none;font-family:var(--display);font-size:clamp(1.9rem,5.4vw,3.2rem);line-height:1.1;color:var(--ivory);transition:padding-left .3s,color .3s}
+.menu li a span{font-family:var(--ui);font-size:.72rem;letter-spacing:.22em;color:var(--sand);min-width:2.2em}
+.menu li a:hover{padding-left:12px;color:var(--sand)}
+.menu .mfoot{max-width:900px;margin:34px auto 0;font-family:var(--ui);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sand)}
+
+/* ---------- titulka ---------- */
+.cover{--vh:100vh;--ch:min(calc(var(--vh) - 170px),780px);position:relative;min-height:100vh;display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(40px,5vw,72px);align-items:center;padding:96px var(--pad) 64px;max-width:1500px;margin:0 auto}
+@supports (height:100svh){.cover{--vh:100svh;min-height:100svh}}
+.cover-wrap{position:relative;justify-self:center}
+.cover-card{position:relative;overflow:hidden;height:var(--ch);width:calc(var(--ch)*2/3);background:var(--latte);box-shadow:0 44px 80px -42px rgba(42,28,22,.6)}
+.cover-card img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:sepia(.16) saturate(.92)}
+.js .cover-card img{animation:unveil 1.5s cubic-bezier(.2,.7,.2,1) both}
+@keyframes unveil{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
+.masthead{position:absolute;top:4.5%;left:0;right:0;text-align:center;color:var(--cocoa);z-index:2;pointer-events:none}
+.masthead h1{font-family:var(--display);font-weight:600;font-size:clamp(5rem,12vw,10rem);line-height:.9;letter-spacing:.07em;text-indent:.07em;text-transform:uppercase}
+.masthead p{margin-top:10px;font-family:var(--ui);font-weight:500;font-size:.64rem;letter-spacing:.3em;text-transform:uppercase}
+.cl{display:flex;flex-direction:column;gap:30px;align-self:center}
+.cl.left{text-align:right}
+.cl a:not(.pill){display:block;text-decoration:none;color:var(--cocoa);border-top:1px solid rgba(74,51,41,.4);padding-top:14px;transition:transform .3s}
+.cl.left a:not(.pill):hover{transform:translateX(-6px)}
+.cl.right a:not(.pill):hover{transform:translateX(6px)}
+.cl small{display:block;font-family:var(--ui);font-size:.66rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--mocha);margin-bottom:6px}
+.cl b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(1.2rem,1.9vw,1.65rem);line-height:1.18}
+.cl .pill{align-self:flex-start;margin-top:6px}
+.scroll-cue{display:none}
+
+@media (max-width:999px){
+  .cover{display:block;padding:0;min-height:0}
+  .cover-wrap{width:100%}
+  .cover-card{width:100%;height:100vh;min-height:620px;box-shadow:none}
+  @supports (height:100svh){.cover-card{height:100svh}}
+  .cover-card::after{content:"";position:absolute;inset:auto 0 0 0;height:50%;background:linear-gradient(to top,rgba(42,28,22,.9),rgba(42,28,22,.5) 55%,rgba(42,28,22,0));z-index:1}
+  .masthead{top:calc(env(safe-area-inset-top,0px) + 82px)}
+  .masthead h1{font-size:clamp(5rem,26vw,9rem)}
+  .cl.right{display:none}
+  .cl.left{position:absolute;left:var(--pad);right:var(--pad);bottom:66px;z-index:3;text-align:left;gap:18px}
+  .cl.left a{color:var(--ivory);border-color:rgba(245,237,227,.45)}
+  .cl.left small{color:var(--sand)}
+  .cl.left b{font-size:1.35rem}
+  .scroll-cue{display:block;position:absolute;left:0;right:0;bottom:22px;z-index:3;text-align:center;font-family:var(--ui);font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--sand);text-decoration:none}
+}
+
+/* ---------- 01 úvodník ---------- */
+.letter-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:clamp(36px,6vw,92px);margin-top:clamp(30px,4vw,56px);align-items:start}
+.copy{column-count:2;column-gap:clamp(28px,4vw,52px)}
+.copy p{margin-bottom:1.1em;orphans:3;widows:3;color:var(--soft)}
+.copy p:first-child::first-letter{font-family:var(--display);font-weight:500;float:left;font-size:4.9em;line-height:.8;padding:.07em .1em 0 0;color:var(--mocha)}
+.motto{margin:clamp(56px,8vw,104px) auto 0;max-width:980px;text-align:center;border-block:1px solid rgba(74,51,41,.32);padding:clamp(36px,5vw,64px) 0}
+.motto .label{display:block;margin-bottom:22px}
+.motto p{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.7rem,4.2vw,3.1rem);line-height:1.2;color:var(--cocoa)}
+
+/* ---------- 02 príbeh ---------- */
+.story-head{max-width:880px}
+.chap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;padding:clamp(40px,5vw,76px) 0;border-top:1px solid rgba(74,51,41,.2)}
+.chap:first-of-type{margin-top:clamp(32px,4vw,56px)}
+.numeral{grid-column:1/span 2;grid-row:1;align-self:start;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(4.5rem,11vw,9rem);line-height:.8;color:transparent;-webkit-text-stroke:1.5px rgba(122,90,70,.5)}
+@supports not (-webkit-text-stroke:1px #000){.numeral{color:var(--sand)}}
+.chap h3{font-family:var(--display);font-weight:500;font-size:clamp(1.75rem,3.1vw,2.6rem);line-height:1.1;color:var(--cocoa);margin-bottom:.7em}
+.chap .body p{margin-bottom:1em;color:var(--soft)}
+.chap .body p:last-child{margin-bottom:0}
+.c1 .fig{grid-column:3/span 5;grid-row:1}
+.c1 .body{grid-column:8/span 5;grid-row:1}
+.c2 .body{grid-column:3/span 6;grid-row:1}
+.c2 .pull{grid-column:9/span 4;grid-row:1}
+.c3 .body{grid-column:3/span 6;grid-row:1}
+.c3 .fig{grid-column:9/span 4;grid-row:1}
+.c4 .body{grid-column:3/span 7;grid-row:1}
+.c1 .fig img{object-position:45% 30%}
+.c3 .fig img{object-position:50% 25%}
+.pull{font-family:var(--display);font-style:italic;font-size:clamp(1.45rem,2.5vw,2.1rem);line-height:1.25;color:var(--mocha);border-left:2px solid var(--sand);padding-left:26px}
+.finale{text-align:center;max-width:980px;margin:clamp(40px,6vw,80px) auto 0;padding-top:clamp(48px,6vw,84px);border-top:1px solid rgba(74,51,41,.32)}
+.finale .lead{font-style:italic;color:var(--soft);max-width:36em;margin:0 auto 1.4em}
+.finale .big{font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,4.6vw,3.5rem);line-height:1.15;color:var(--cocoa);margin-bottom:1.1em}
+.finale .big em{font-weight:400;color:var(--mocha)}
+
+/* ---------- 03 zákulisie ---------- */
+.behind{background:var(--cocoa);color:var(--ivory)}
+.behind .folio{border-color:rgba(245,237,227,.32);color:var(--sand)}
+.behind-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,6vw,96px);align-items:center}
+.behind .fig .frame::before{border-color:var(--sand)}
+.behind .fig img{aspect-ratio:3/4;object-position:50% 24%;filter:sepia(.3) saturate(.8) contrast(1.03)}
+.behind .fig figcaption{color:var(--sand)}
+.behind .title{color:var(--ivory)}
+.behind .title em{color:var(--sand)}
+.behind .bcopy p{margin-top:1.2em;color:#E9DCCD;max-width:34em}
+.versus{display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(30px,4vw,52px);border-top:1px solid rgba(245,237,227,.3)}
+.versus>div{padding:22px 22px 0 0}
+.versus>div+div{border-left:1px solid rgba(245,237,227,.3);padding:22px 0 0 24px}
+.versus h4{font-family:var(--ui);font-weight:500;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--sand);margin-bottom:14px}
+.versus ul{list-style:none;font-family:var(--display);font-size:clamp(1.1rem,1.8vw,1.45rem);line-height:1.3}
+.versus li{padding:6px 0}
+.versus>div:first-child li{color:rgba(245,237,227,.55)}
+.versus>div+div li{color:var(--ivory)}
+
+/* ---------- 04 príležitosť ---------- */
+.opp{background:rgba(232,216,198,.55)}
+.opp-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,6vw,96px);align-items:start}
+.opp-side{position:sticky;top:110px}
+.opp-side p{margin-top:24px;max-width:26em;color:var(--soft)}
+.opp-side .note{font-family:var(--ui);font-size:.78rem;letter-spacing:.06em;color:var(--mocha);margin-top:18px}
+.rows{list-style:none;border-top:1px solid rgba(74,51,41,.38)}
+.rows li{display:grid;grid-template-columns:60px 1fr;gap:6px 18px;padding:28px 0;border-bottom:1px solid rgba(74,51,41,.38);transition:padding-left .35s}
+.rows li:hover{padding-left:14px}
+.rows .n{font-family:var(--ui);font-size:.72rem;letter-spacing:.22em;color:var(--mocha);padding-top:.9em}
+.rows h3{font-family:var(--display);font-weight:500;font-size:clamp(1.45rem,2.6vw,2.1rem);line-height:1.1;color:var(--cocoa)}
+.rows p{grid-column:2;color:var(--soft)}
+
+/* ---------- 05 otázky ---------- */
+.faq .inner{max-width:960px}
+.faq .title{margin-bottom:clamp(30px,4vw,52px)}
+.faq details{border-top:1px solid rgba(74,51,41,.38)}
+.faq details:last-of-type{border-bottom:1px solid rgba(74,51,41,.38)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.2;color:var(--cocoa)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-family:var(--ui);font-weight:300;font-size:2rem;line-height:1;color:var(--mocha);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 28px;max-width:40em;color:var(--soft)}
+
+/* ---------- 06 pozvánka ---------- */
+.invite{background:linear-gradient(180deg,transparent 0,rgba(235,211,195,.7) 100%)}
+.invite-card{position:relative;max-width:860px;margin:0 auto;background:#FBF6EE;padding:clamp(40px,6vw,76px);box-shadow:0 50px 90px -50px rgba(42,28,22,.55)}
+.invite-card::before{content:"";position:absolute;inset:12px;border:1px solid rgba(74,51,41,.3);pointer-events:none}
+.sender{display:flex;align-items:center;gap:16px;margin-bottom:30px}
+.sender img{width:64px;height:64px;border-radius:50%;object-fit:cover;filter:sepia(.2)}
+.sender span{font-family:var(--ui);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mocha);line-height:1.6}
+.invite .title{font-size:clamp(2.2rem,5.4vw,4rem)}
+.invite .intro{margin-top:20px;max-width:34em;color:var(--soft)}
+.stepper{margin-top:38px}
+.sbar{height:2px;background:rgba(74,51,41,.16);margin-bottom:10px}
+.sbar i{display:block;height:100%;background:var(--cocoa);transform-origin:left;transform:scaleX(.34);transition:transform .45s}
+.scount{font-family:var(--ui);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mocha)}
+.fstep{margin-top:6px}
+.fstep h3{font-family:var(--display);font-weight:500;font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.15;color:var(--cocoa);margin:16px 0 22px}
+.fld{width:100%;border:0;border-bottom:1px solid var(--cocoa);border-radius:0;background:transparent;padding:10px 0 12px;font-family:var(--display);font-size:clamp(1.4rem,3vw,2rem);color:var(--ink);outline:none}
+.fld::placeholder{color:rgba(74,51,41,.4);font-style:italic}
+.fld:focus{border-bottom-width:2px;padding-bottom:11px}
+textarea.fld{min-height:112px;resize:vertical;font-family:var(--text);font-size:1.15rem;border:1px solid rgba(74,51,41,.4);padding:14px}
+textarea.fld:focus{padding:14px;border-width:2px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;margin:0}
+.chip span{display:block;padding:12px 20px;border:1px solid rgba(74,51,41,.42);border-radius:999px;font-family:var(--ui);font-size:.95rem;color:var(--cocoa);transition:background .2s,color .2s}
+.chip input:checked+span{background:var(--cocoa);color:var(--ivory);border-color:var(--cocoa)}
+.chip input:focus-visible+span{outline:2px solid var(--mocha);outline-offset:3px}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:20px;font-family:var(--ui);font-size:.88rem;line-height:1.5;color:var(--soft)}
+.consent input{flex:none;width:18px;height:18px;margin-top:2px;accent-color:var(--cocoa)}
+.fnav{display:flex;gap:12px;align-items:center;margin-top:28px;flex-wrap:wrap}
+.fnote{margin-top:16px;min-height:1.5em;font-family:var(--ui);font-size:.85rem;color:var(--mocha)}
+.fnote a{color:var(--cocoa)}
+.direct{max-width:860px;margin:30px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.direct a{display:block;text-decoration:none;padding:22px 26px;border:1px solid rgba(74,51,41,.38);color:var(--cocoa);transition:background .3s,color .3s}
+.direct a:hover{background:var(--cocoa);color:var(--ivory)}
+.direct small{display:block;font-family:var(--ui);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mocha);margin-bottom:4px}
+.direct a:hover small{color:var(--sand)}
+.direct b{font-family:var(--display);font-weight:500;font-size:1.45rem}
+
+/* ---------- pätička ---------- */
+footer{background:var(--ink);color:#CDBBA8;padding:clamp(56px,8vw,96px) 0 36px;text-align:center}
+footer .big{font-family:var(--display);font-weight:600;font-size:clamp(5rem,17vw,12rem);line-height:.9;letter-spacing:.07em;text-indent:.07em;text-transform:uppercase;color:var(--ivory)}
+footer .motto-f{font-family:var(--display);font-style:italic;font-size:clamp(1.2rem,2.4vw,1.7rem);margin:18px auto 0;max-width:30em;color:var(--sand)}
+footer .links{margin:30px 0;display:flex;justify-content:center;gap:12px 30px;flex-wrap:wrap}
+footer .links a{font-family:var(--ui);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--sand)}
+footer .links a:hover{color:var(--ivory)}
+footer .disc{max-width:720px;margin:0 auto;padding-top:26px;border-top:1px solid rgba(216,191,166,.22);font-family:var(--ui);font-size:.76rem;line-height:1.75;color:#A8937F}
+
+/* ---------- animácie ---------- */
+.js .rise{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.js .rise.in{opacity:1;transform:none}
+.js .reveal{clip-path:inset(0 0 100% 0);transition:clip-path 1.2s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{clip-path:inset(0)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rise,.js .reveal{opacity:1;transform:none;clip-path:none;transition:none}
+  .js .cover-card img{animation:none}
+}
+
+/* ---------- mobil ---------- */
+@media (max-width:880px){
+  .letter-grid,.behind-grid,.opp-grid{grid-template-columns:1fr}
+  .copy{column-count:1}
+  .opp-side{position:static}
+  .letter-grid .fig{max-width:420px;margin-right:14px}
+  .chap{display:block;padding:38px 0}
+  .numeral{font-size:4.6rem;margin-bottom:10px}
+  .chap .fig{margin:6px 14px 34px 0;max-width:460px}
+  .chap .body{margin-top:0}
+  .c2 .pull{margin-top:28px}
+  .behind .fig{max-width:380px;margin:0 14px 10px 0}
+  .direct{grid-template-columns:1fr}
+  .rows li{grid-template-columns:44px 1fr}
+}
+@media (max-width:420px){
+  .top .pill{padding:10px 14px;font-size:.66rem;letter-spacing:.16em}
+  .versus>div{padding-right:12px}
+  .versus>div+div{padding-left:16px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#omne">Preskočiť na obsah</a>
+
+<header class="top" id="topbar">
+  <a class="mono" href="#top" aria-label="Lea, späť na začiatok">LEA</a>
+  <div class="right">
+    <button class="pill" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">Obsah</button>
+    <a class="pill fill" href="#pozvanka">Napísať</a>
+  </div>
+  <span class="bar" aria-hidden="true"></span>
+</header>
+
+<nav class="menu" id="menu" aria-label="Obsah stránky" hidden>
+  <button class="close" id="menuClose" type="button">Zavrieť ✕</button>
+  <ol>
+    <li><a href="#omne"><span>01</span>Úvodník</a></li>
+    <li><a href="#pribeh"><span>02</span>Môj príbeh</a></li>
+    <li><a href="#zakulisie"><span>03</span>Zákulisie</a></li>
+    <li><a href="#prilezitost"><span>04</span>Príležitosť</a></li>
+    <li><a href="#otazky"><span>05</span>Otázky na rovinu</a></li>
+    <li><a href="#pozvanka"><span>06</span>Pozvánka</a></li>
+  </ol>
+  <p class="mfoot">Mysli vo veľkom · Uč sa každý deň</p>
+</nav>
+
+<main id="top">
+
+<!-- ================= TITULKA ================= -->
+<section class="cover" aria-label="Titulka">
+  <div class="cl left rise">
+    <a href="#pribeh"><small>Príbeh</small><b>Z uniformy do vlastnej cesty</b></a>
+    <a href="#zakulisie"><small>Zákulisie</small><b>Keď som chcela skončiť. Úprimne.</b></a>
+    <a href="#prilezitost"><small>Príležitosť</small><b>Part-time, ktorý ťa posunie</b></a>
+  </div>
+
+  <div class="cover-wrap">
+    <div class="cover-card">
+      <img src="hero.jpg" alt="Lea sedí na schodoch v čiernom brankárskom drese a ružových rukaviciach" fetchpriority="high">
+      <div class="masthead">
+        <h1>Lea</h1>
+        <p>Číslo 01 · Odvaha začať odznova</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cl right rise">
+    <a href="#otazky"><small>Na rovinu</small><b>5 otázok pred prvým krokom</b></a>
+    <a href="#pozvanka"><small>Pozvánka</small><b>Napíš mi. Ozvem sa ti osobne.</b></a>
+    <a class="pill fill" href="#pozvanka">Chcem vedieť viac →</a>
+  </div>
+  <a class="scroll-cue" href="#omne">Čítaj ďalej ↓</a>
+</section>
+
+<!-- ================= 01 ÚVODNÍK ================= -->
+<section class="sec letter" id="omne">
+  <div class="inner">
+    <div class="folio"><span>01 — Úvodník</span><span>Lea · Číslo 01</span></div>
+    <h2 class="title rise">Ahoj, som <em>Lea.</em></h2>
+    <div class="letter-grid">
+      <div class="copy rise">
+        <p>Verím, že život, po akom túžime, si môžeme postupne vybudovať samy. Stačí byť ochotná vystúpiť zo svojej komfortnej zóny, učiť sa nové veci a nebáť sa začať od nuly. 🤍</p>
+        <p>Som Slovenka a budujem si vlastnú cestu v online podnikaní. Zaujímam sa o finančnú gramotnosť, trading, digitálny svet a moderné možnosti, ktoré nám dnešná doba ponúka.</p>
+        <p>Mojím cieľom je nielen osobnostne a finančne rásť, ale zároveň inšpirovať ďalších ľudí, najmä ženy, aby objavili svoj potenciál, získali nové zručnosti a začali budovať niečo vlastné.</p>
+        <p>Neponúkam zázračné riešenia ani nereálne sľuby. Zdieľam svoju cestu, svoje skúsenosti, úspechy aj výzvy. Pretože aj ja sa stále učím, rastiem a posúvam ďalej.</p>
+      </div>
+      <figure class="fig">
+        <div class="frame"><img class="reveal" src="smile.jpg" alt="Lea s úsmevom v športovej hale" loading="lazy" style="object-position:72% 30%"></div>
+        <figcaption>Ja, v mojom živle</figcaption>
+      </figure>
+    </div>
+    <div class="motto rise">
+      <span class="label">Moje motto</span>
+      <p>Mysli vo veľkom.<br>Uč sa každý deň.<br>Buduj život podľa vlastných pravidiel. 🤍</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 PRÍBEH ================= -->
+<section class="sec story" id="pribeh">
+  <div class="inner">
+    <div class="folio"><span>02 — Môj príbeh</span><span>Lea · Číslo 01</span></div>
+    <h2 class="title story-head rise">Štyri kapitoly, <em>jedno rozhodnutie</em></h2>
+
+    <article class="chap c1">
+      <div class="numeral" aria-hidden="true">I</div>
+      <figure class="fig">
+        <div class="frame"><img class="reveal" src="police.jpg" alt="Lea v uniforme Policajného zboru pri služobnom aute" loading="lazy"></div>
+        <figcaption>Môj detský sen: Policajný zbor</figcaption>
+      </figure>
+      <div class="body rise">
+        <h3>Začiatok úplne odznova</h3>
+        <p>Kedysi som pracovala v Policajnom zbore, bol to môj detský sen. Mala som stabilnú prácu, ale cítila som, že to nie je život, ktorý chcem žiť navždy. Túžila som po nových možnostiach, väčšej slobode a príležitosti vybudovať si lepšiu budúcnosť.</p>
+        <p>Preto som sa rozhodla opustiť Slovensko a presťahovať sa do Švédska. Verila som, že práve tam nájdem nové začiatky a príležitosti, ktoré som hľadala.</p>
+      </div>
+    </article>
+
+    <article class="chap c2">
+      <div class="numeral" aria-hidden="true">II</div>
+      <div class="body rise">
+        <h3>Realita nebola taká, ako som si predstavovala</h3>
+        <p>Nová krajina však automaticky neznamenala nový, jednoduchší život. Čakali ma ďalšie výzvy, neistota, náročné obdobia a chvíle, keď som si kládla otázku, či som sa rozhodla správne.</p>
+        <p>Začínala som od nuly. Nové prostredie, nový jazyk, nová práca a život ďaleko od domova. Postupne som si uvedomila, že nechcem iba vymeniť jednu prácu za druhú a čakať, že sa môj život raz zmení sám.</p>
+      </div>
+      <blockquote class="pull rise">Nechcem iba vymeniť jednu prácu za druhú a čakať, že sa môj život raz zmení sám.</blockquote>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 03 ZÁKULISIE ================= -->
+<section class="sec behind" id="zakulisie">
+  <div class="inner">
+    <div class="folio"><span>03 — Zákulisie</span><span>Lea · Číslo 01</span></div>
+    <div class="behind-grid">
+      <figure class="fig">
+        <div class="frame"><img class="reveal" src="hard.jpg" alt="Lea večer pri notebooku, unavená a zamyslená" loading="lazy"></div>
+        <figcaption>Nie každý deň vyzerá ako na Instagrame</figcaption>
+      </figure>
+      <div class="bcopy">
+        <h2 class="title rise">Cesta nie je vždy <em>ľahká.</em></h2>
+        <p class="rise">Táto fotka vznikla v období, keď som bola smutná a vyčerpaná a viackrát som chcela celé podnikanie vzdať. Popri tom som pracovala a bola som unavená.</p>
+        <p class="rise">Nedávam ju sem, aby som sa sťažovala. Dávam ju sem, lebo za každým úspechom, ktorý uvidíš, stoja aj dni, keď sa nechce. Rozdiel nerobí motivácia, ale to, že pokračuješ aj vtedy, keď výsledky ešte nevidíš.</p>
+        <div class="versus rise">
+          <div>
+            <h4>Čo vidíš</h4>
+            <ul><li>Úsmevy a úspechy</li><li>Hotové výsledky</li><li>Príbeh s dobrým koncom</li></ul>
+          </div>
+          <div>
+            <h4>Čo za tým býva</h4>
+            <ul><li>Únava po práci</li><li>Chvíle pochybností</li><li>Dni, keď sa nechce</li><li>Povinnosti, ktoré nezmiznú</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 (pokračovanie) PRÍBEH ================= -->
+<section class="sec story" style="padding-top:clamp(40px,5vw,72px)" aria-label="Môj príbeh, pokračovanie">
+  <div class="inner">
+    <article class="chap c3" style="border-top:0">
+      <div class="numeral" aria-hidden="true">III</div>
+      <div class="body rise">
+        <h3>Rozhodla som sa vziať svoju budúcnosť do vlastných rúk</h3>
+        <p>Nechcela som byť závislá iba od jednej výplaty, jedného zamestnávateľa alebo od toho, koľko hodín denne odpracujem.</p>
+        <p>Začala som sa vzdelávať, objavovať svet online podnikania, finančnej gramotnosti a tradingu. Učila som sa nové veci, vystupovala zo svojej komfortnej zóny a začala budovať niečo vlastné.</p>
+        <p>Nie všetko išlo podľa predstáv. Stále mám svoje povinnosti, náročné dni aj chvíle pochybností. Rozdiel je v tom, že dnes už aktívne pracujem na budúcnosti, ktorú chcem.</p>
+      </div>
+      <figure class="fig">
+        <div class="frame"><img class="reveal" src="goalie.jpg" alt="Lea v bráne počas zápasu, sústredená a pripravená" loading="lazy"></div>
+        <figcaption>Disciplína a tím</figcaption>
+      </figure>
+    </article>
+
+    <article class="chap c4">
+      <div class="numeral" aria-hidden="true">IV</div>
+      <div class="body rise">
+        <h3>Dnes budujem život podľa vlastných predstáv</h3>
+        <p>Neľutujem svoje rozhodnutia. Ani odchod zo Slovenska, ani náročné začiatky, ani všetky chvíle, keď som musela začínať odznova.</p>
+        <p>Práve tie ma naučili, že na zmenu nepotrebuješ dokonalé podmienky. Potrebuješ odvahu urobiť prvý krok a disciplínu pokračovať aj vtedy, keď výsledky ešte nevidíš.</p>
+      </div>
+    </article>
+
+    <div class="finale">
+      <p class="lead rise">A ak si práve teraz v období, keď cítiš, že chceš od života viac, možno je čas prestať čakať na správny moment.</p>
+      <p class="big rise">Pretože život, ktorý chceš žiť, sa nezačne budovať zajtra. <em>Začína sa rozhodnutím, ktoré urobíš dnes.</em> 🤍</p>
+      <a class="btn rise" href="#pozvanka">Urobím prvý krok</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 PRÍLEŽITOSŤ ================= -->
+<section class="sec opp" id="prilezitost">
+  <div class="inner">
+    <div class="folio"><span>04 — Príležitosť</span><span>Lea · Číslo 01</span></div>
+    <div class="opp-grid">
+      <div class="opp-side">
+        <h2 class="title rise">Čo ti táto cesta <em>môže dať</em></h2>
+        <p class="rise">Pracuješ, študuješ alebo sa staráš o rodinu? Začať sa dá aj popri tom, part-time a vo vlastnom tempe.</p>
+        <p class="note rise">Výsledky sú individuálne a nie sú garantované.</p>
+      </div>
+      <ol class="rows">
+        <li class="rise"><span class="n">01</span><h3>Kariérny rast</h3><p>Priestor vybudovať si vlastný biznis a postupne rásť, vo svojom tempe a svojím smerom.</p></li>
+        <li class="rise"><span class="n">02</span><h3>Part-time flexibilita</h3><p>Začneš popri tom, čo robíš dnes. Čas si prispôsobíš svojmu životu, nie naopak.</p></li>
+        <li class="rise"><span class="n">03</span><h3>Osobnostný a mentálny rast</h3><p>Sebadôvera, komunikácia a disciplína. Zručnosti, ktoré ti zostanú, nech ideš kamkoľvek.</p></li>
+        <li class="rise"><span class="n">04</span><h3>Príjem navyše</h3><p>Možnosť pridať si ďalší príjem popri zamestnaní. Záleží od času, úsilia a vytrvalosti, bez garancií.</p></li>
+        <li class="rise"><span class="n">05</span><h3>Komunita</h3><p>Nebudeš v tom sama. Okolo seba budeš mať ľudí, ktorí rastú podobným smerom.</p></li>
+        <li class="rise"><span class="n">06</span><h3>Vzdelávanie</h3><p>Finančná gramotnosť, trading a digitálny svet krok za krokom, aj keď začínaš od nuly.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 OTÁZKY ================= -->
+<section class="sec faq" id="otazky">
+  <div class="inner">
+    <div class="folio"><span>05 — Otázky na rovinu</span><span>Lea · Číslo 01</span></div>
+    <h2 class="title rise">Na rovinu: <em>5 otázok</em> pred prvým krokom</h2>
+    <details class="rise">
+      <summary>Je to pre mňa?</summary>
+      <p>Ak cítiš, že chceš od života viac, si ochotná učiť sa nové veci a vystúpiť zo svojej komfortnej zóny, tak áno. Najviac inšpirujem ženy, ale ak ťa to oslovuje, napíš mi.</p>
+    </details>
+    <details class="rise">
+      <summary>Dá sa to robiť popri práci?</summary>
+      <p>Áno. Aj ja som svoju cestu budovala popri práci a povinnostiach. Začínaš part-time, vo svojom tempe, a postupne zistíš, koľko času tomu chceš venovať.</p>
+    </details>
+    <details class="rise">
+      <summary>Musím mať skúsenosti?</summary>
+      <p>Nie. Ja som začínala od nuly a učím sa každý deň. Dôležitejšia než skúsenosť je ochota učiť sa a pokračovať aj vtedy, keď sa nedarí hneď.</p>
+    </details>
+    <details class="rise">
+      <summary>Sľubuješ zárobok?</summary>
+      <p>Nie. Neponúkam zázračné riešenia ani nereálne sľuby. Je to možnosť, ktorá si vyžaduje čas, učenie a vytrvalosť, a výsledky sú u každého iné. Ukážem ti, ako to vidím ja, a rozhodnutie je na tebe.</p>
+    </details>
+    <details class="rise">
+      <summary>Ako začať?</summary>
+      <p>Odpovedz na pár otázok v pozvánke nižšie, otvorí sa ti WhatsApp s predvyplnenou správou. Ozvem sa ti a povieme si, či je to pre teba a aké sú prvé kroky.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ================= 06 POZVÁNKA ================= -->
+<section class="sec invite" id="pozvanka">
+  <div class="inner">
+    <div class="folio"><span>06 — Pozvánka</span><span>Lea · Číslo 01</span></div>
+    <div class="invite-card rise">
+      <div class="sender">
+        <img src="avatar.jpg" alt="Lea" width="64" height="64" loading="lazy">
+        <span>Od: Lea<br>Pre: teba</span>
+      </div>
+      <h2 class="title">Si pozvaná urobiť <em>prvý krok.</em></h2>
+      <p class="intro">Tri krátke otázky. Potom sa ti otvorí WhatsApp s predvyplnenou správou, stačí ju odoslať. Údaje sa nikam neukladajú.</p>
+
+      <form class="stepper" id="leadForm" novalidate>
+        <div class="sbar" aria-hidden="true"><i id="sbar"></i></div>
+        <div class="scount" aria-live="polite">Otázka <span id="stepNow">1</span> z 3</div>
+
+        <div class="fstep" role="group" aria-labelledby="q1">
+          <h3 id="q1">Ako ti môžem hovoriť?</h3>
+          <input class="fld" id="fname" type="text" name="name" placeholder="Tvoje meno" autocomplete="given-name" maxlength="60">
+        </div>
+
+        <div class="fstep" role="group" aria-labelledby="q2">
+          <h3 id="q2">Čo ťa zaujíma najviac?</h3>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="topic" value="Podnikanie popri práci"><span>Podnikanie popri práci</span></label>
+            <label class="chip"><input type="radio" name="topic" value="Osobný a mentálny rast"><span>Osobný a mentálny rast</span></label>
+            <label class="chip"><input type="radio" name="topic" value="Financie a trading"><span>Financie a trading</span></label>
+            <label class="chip"><input type="radio" name="topic" value="Komunita a podpora"><span>Komunita a podpora</span></label>
+            <label class="chip"><input type="radio" name="topic" value="Chcem len viac informácií"><span>Chcem len viac informácií</span></label>
+          </div>
+        </div>
+
+        <div class="fstep" role="group" aria-labelledby="q3">
+          <h3 id="q3">Chceš mi ešte niečo napísať?</h3>
+          <textarea class="fld" id="fmsg" name="msg" placeholder="Napíš mi, v akej si situácii a čo od života chceš. (nepovinné)" maxlength="600"></textarea>
+          <label class="consent"><input type="checkbox" id="fconsent"><span>Súhlasím, aby ma Lea kontaktovala cez WhatsApp ohľadom mojej správy.</span></label>
+        </div>
+
+        <div class="fnav">
+          <button class="pill" type="button" id="fback" hidden>← Späť</button>
+          <button class="btn" type="button" id="fnext" hidden>Ďalej →</button>
+          <button class="btn" type="submit" id="fsend">Odoslať cez WhatsApp</button>
+        </div>
+        <p class="fnote" id="fnote" aria-live="polite"></p>
+        <noscript><p class="fnote">Na odoslanie formulára zapni JavaScript, alebo mi napíš priamo na WhatsApp nižšie.</p></noscript>
+      </form>
+    </div>
+
+    <div class="direct">
+      <a href="https://wa.me/46765802419" target="_blank" rel="noopener"><small>Radšej píšeš priamo?</small><b>WhatsApp · +46 76 580 24 19</b></a>
+      <a href="https://www.instagram.com/leanikulin" target="_blank" rel="noopener"><small>Instagram</small><b>@leanikulin</b></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="big">Lea</div>
+    <p class="motto-f">Mysli vo veľkom. Uč sa každý deň. Buduj život podľa vlastných pravidiel. 🤍</p>
+    <div class="links">
+      <a href="https://www.instagram.com/leanikulin" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/46765802419" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#top">Späť hore ↑</a>
+    </div>
+    <p class="disc">Upozornenie: Obsah tejto stránky má informačný charakter a nepredstavuje finančné, investičné ani právne poradenstvo. Výsledky sú individuálne a závisia od vlastného úsilia, času a okolností. Nie je možné garantovať žiaden konkrétny príjem. Trading a investovanie so sebou nesú riziko straty. © <span id="year">2026</span> Lea</p>
+  </div>
+</footer>
+
+<script>
+/* ===================== NASTAVENIA ===================== */
+const CONFIG = {
+  whatsapp: "46765802419"             // číslo bez + a bez medzier
+};
+/* ======================================================= */
+(function () {
+  'use strict';
+  const $ = (s, c) => (c || document).querySelector(s);
+  const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
+
+  /* ---------- horná lišta + postup čítania ---------- */
+  const bar = $('#topbar'); let tick = false;
+  function onScroll() {
+    const y = window.pageYOffset || document.documentElement.scrollTop;
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.classList.toggle('solid', y > 40);
+    bar.style.setProperty('--p', h > 0 ? Math.min(1, y / h) : 0);
+    tick = false;
+  }
+  window.addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  /* ---------- menu ---------- */
+  const menu = $('#menu'), mbtn = $('#menuBtn');
+  function setMenu(open) {
+    menu.hidden = !open;
+    mbtn.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+    (open ? $('#menuClose') : mbtn).focus();
+  }
+  mbtn.addEventListener('click', () => setMenu(menu.hidden));
+  $('#menuClose').addEventListener('click', () => setMenu(false));
+  $$('a', menu).forEach(a => a.addEventListener('click', () => {
+    menu.hidden = true; mbtn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+  }));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) setMenu(false); });
+
+  /* ---------- objavovanie prvkov ---------- */
+  const els = $$('.rise, .reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { threshold: .12, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(el => io.observe(el));
+  } else { els.forEach(el => el.classList.add('in')); }
+
+  /* ---------- formulár po jednej otázke -> WhatsApp ---------- */
+  const form = $('#leadForm'), steps = $$('.fstep', form);
+  const back = $('#fback'), next = $('#fnext'), send = $('#fsend'), note = $('#fnote');
+  let cur = 0;
+  function show(i, focus) {
+    cur = Math.max(0, Math.min(steps.length - 1, i));
+    steps.forEach((s, k) => { s.hidden = k !== cur; });
+    $('#stepNow').textContent = cur + 1;
+    $('#sbar').style.transform = 'scaleX(' + ((cur + 1) / steps.length) + ')';
+    back.hidden = cur === 0;
+    next.hidden = cur === steps.length - 1;
+    send.hidden = cur !== steps.length - 1;
+    note.textContent = '';
+    if (focus) {
+      const f = $('input[type=text], textarea', steps[cur]);
+      if (f) f.focus();
+    }
+  }
+  function goNext() {
+    if (cur === 0 && !$('#fname').value.trim()) {
+      note.textContent = 'Napíš mi, prosím, svoje meno.'; $('#fname').focus(); return;
+    }
+    show(cur + 1, true);
+  }
+  next.addEventListener('click', goNext);
+  back.addEventListener('click', () => show(cur - 1, true));
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (cur < steps.length - 1) { goNext(); return; }
+    const name = $('#fname').value.trim();
+    if (!name) { show(0, true); note.textContent = 'Napíš mi, prosím, svoje meno.'; return; }
+    if (!$('#fconsent').checked) { note.textContent = 'Potvrď, prosím, súhlas s kontaktovaním.'; return; }
+    const topicEl = $('input[name=topic]:checked', form);
+    const msg = $('#fmsg').value.trim();
+    let t = 'Ahoj Lea, volám sa ' + name + '.';
+    if (topicEl) t += '\nZaujíma ma: ' + topicEl.value + '.';
+    if (msg) t += '\n\n' + msg;
+    t += '\n\n(Píšem ti cez tvoju stránku.)';
+    const url = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(t);
+    const a = document.createElement('a');
+    a.href = url; a.target = '_blank'; a.rel = 'noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+    note.textContent = 'Super! Otvoril sa WhatsApp, stačí odoslať správu. Ak sa nič neotvorilo, ';
+    const l = document.createElement('a'); l.href = url; l.target = '_blank'; l.rel = 'noopener'; l.textContent = 'klikni sem.';
+    note.appendChild(l);
+  });
+  show(0, false);
+
+  $('#year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
